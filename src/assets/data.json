@@ -1,0 +1,70 @@
+{
+  "product": {
+    "name": "Apple iPhone 6s 64GB Zilver",
+    "deviceOriginalPrice": 729,
+    "images": [
+      {
+        "name": "front",
+        "url": "assets/images/front.png"
+      },
+      {
+        "name": "side",
+        "url": "assets/images/side.png"
+      },
+      {
+        "name": "back",
+        "url": "assets/images/back.png"
+      }
+    ],
+    "subscriptions": [
+      {
+        "name": "Basis Mobiel",
+        "volume": "150 min or sms",
+        "data": "500 MB",
+        "deviceDiscountPrice": 509.00,
+        "subReg": 44,
+        "subDiscount": 10
+      },
+      {
+        "name": "Vooral Internet Instap",
+        "volume": "150 min or sms",
+        "data": "1 GB",
+        "deviceDiscountPrice": 339.00,
+        "subReg": 47.50,
+        "subDiscount": 5
+      },
+      {
+        "name": "Vooral Internet Standaard",
+        "volume": "200 min or sms",
+        "data": "5 GB",
+        "deviceDiscountPrice": 249.00,
+        "subReg": 52.50,
+        "subDiscount": 5
+      },
+      {
+        "name": "Zorgeloos Instap",
+        "volume": "Unlimited",
+        "data": "1 GB",
+        "deviceDiscountPrice": 249.00,
+        "subReg": 59.00,
+        "subDiscount": 10
+      },
+      {
+        "name": "Zorgeloos Premium",
+        "volume": "Unlimited",
+        "data": "10 GB",
+        "deviceDiscountPrice": 129.00,
+        "subReg": 74.00,
+        "subDiscount": 10
+      },
+      {
+        "name": "Zorgeloos Standaard",
+        "volume": "Unlimited",
+        "data": "5 GB",
+        "deviceDiscountPrice": 199.00,
+        "subReg": 64.00,
+        "subDiscount": 10
+      }
+    ]
+  }
+}
