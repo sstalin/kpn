@@ -9,13 +9,19 @@
   function ProductController(data) {
     var vm = this;
     vm.title = 'ProductController';
+    vm.discounted = discounted;
 
     activate();
 
     ////////////////
 
     function activate() {
-      vm.data = data;
+      vm.product = data;
+    }
+
+    function discounted(sub){
+      var diff = parseFloat(sub.subReg) - parseFloat(sub.subDiscount);
+      return  parseFloat(diff).toFixed(2);
     }
   }
 

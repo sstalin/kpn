@@ -1,1 +1,36 @@
-<h2>Subscriptions</h2>
+<h1>{{vm.product.name}}</h1>
+<br/>
+<h3>Select subscription</h3>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Minutes/sms</th>
+    <th>Internet</th>
+    <th>Device price</th>
+    <th>Costs/month</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="s in vm.product.subscriptions track by s.name">
+    <th>
+      <input type="radio" ng-model="vm.activeSubscription" ng-value="s"/>
+      <b>{{s.name}}</b>
+    </th>
+    <td>
+      <span>{{s.volume}}</span>
+    </td>
+    <td>
+      <span>{{s.data}}</span>
+    </td>
+    <td>
+      <span><b>{{s.deviceDiscountPrice | currency:"&euro;"}}</b></span>
+    </td>
+    <td>
+      <span class="regular-price">{{s.subReg | currency:"&euro;"}}</span>
+      <span>&nbsp;&nbsp;</span>
+      <span class="discount-price">&euro;{{vm.discounted(s);}}</span>
+    </td>
+  </tr>
+  </tbody>
+</table>

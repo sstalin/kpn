@@ -15,8 +15,8 @@
         controller: 'ProductController',
         controllerAs: 'vm',
         resolve: {
-          data: function() {
-            return [1, 2, 3];
+          data: function(productInfo) {
+            return productInfo.get();
           }
         }
       })
