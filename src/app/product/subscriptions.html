@@ -1,6 +1,6 @@
 <h1>{{vm.product.name}}</h1>
 <br/>
-<h3>Select subscription</h3>
+<h4>Select subscription</h4>
 <table class="table table-hover">
   <thead>
   <tr>
@@ -29,7 +29,7 @@
     <td>
       <span class="regular-price">{{s.subReg | currency:"&euro;"}}</span>
       <span>&nbsp;&nbsp;</span>
-      <span class="discount-price">&euro;{{vm.discounted(s);}}</span>
+      <span class="discounted-price">&euro;{{vm.discounted(s);}}</span>
     </td>
   </tr>
   </tbody>
