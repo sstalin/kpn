@@ -1,3 +1,35 @@
-.preview{
-background-color: $background-gray-dark;
+.preview {
+  background-color: $background-gray-dark;
+  position: relative;
+
+  .price-tag {
+    position: absolute;
+    right: 0;
+    top: 70%;
+    height: 50px;
+    background-color: #1CA3FF;
+    color: #FFF;
+    .device-type{
+      line-height: 1.2;
+      font-size: 0.75em;
+    }
+    .price {
+      display: block;
+      font-size: 1.6em;
+      line-height: 1.2;
+    }
+  }
+  .price-tag:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:-10px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+
+    border-right:10px solid #1CA3FF;
+  }
+
 }

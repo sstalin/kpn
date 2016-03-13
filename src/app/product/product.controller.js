@@ -10,6 +10,7 @@
     var vm = this;
     vm.title = 'ProductController';
     vm.discounted = discounted;
+    vm.tagPrice = tagPrice;
 
     activate();
 
@@ -24,6 +25,16 @@
       var subscription = sub || vm.activeSubscription;
       var diff = parseFloat(subscription.regular) - parseFloat(subscription.discount);
       return  parseFloat(diff).toFixed(2);
+    }
+
+    function tagPrice(p){
+      var price = parseFloat(p || vm.activeSubscription.deviceDiscountPrice);
+      // case of fraction
+      if((price - Math.floor(price)) > 0){
+        return price.toFixed(2);
+      }
+      return parseInt(price) + ',-';
+
     }
   }
 

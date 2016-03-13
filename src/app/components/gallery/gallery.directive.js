@@ -28,9 +28,14 @@
   /* @ngInject */
   function GalleryController() {
     this.activate = activate;
+    this.isActive = isActive;
 
     function activate() {
        this.active = this.images[0];
+    }
+
+    function isActive(image){
+      return image.name === this.active.name;
     }
   }
 
