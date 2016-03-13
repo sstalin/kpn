@@ -1,5 +1,15 @@
-.receipt{
+.order-detail{
   background-color: $background-gray-med;
-  padding: 10px;
 
+  .order-btn{
+    width:100%;
+    background-color: #1CA3FF;
+    color:#FFF;
+    line-height: 2;
+    outline: none;
+  }
+}
+
+.discount-detail{
+  background-color: $background-gray-light;
 }

@@ -1,5 +1,54 @@
-<h4>
-  <b>Total per month</b>
-  <b>&euro;{{vm.discounted}}</b>
-  <button type="button" class="btn btn-info btn-lg">Bestellen</button>
-</h4>
+<section class="order-detail panel-group">
+  <br/>
+
+  <p>
+    <b>Total per month</b>
+    <b class="pull-right">&euro;&nbsp;{{vm.discounted();}}</b>
+  </p>
+
+  <p>
+    <b>Totale one-off</b>
+    <b class="pull-right">{{vm.activeSubscription.deviceDiscountPrice | currency:'&euro;&nbsp;':2}}</b>
+  </p>
+
+  <div>
+    <button type="button" class="order-btn">Bestellen</button>
+  </div>
+</section>
+
+<section class="discount-detail panel-group">
+  <p>Monthly costs</p>
+
+  <div>
+    <b>
+      <small>Zorgeloos Standaard</small>
+    </b>
+    <b class="pull-right">
+      <small>{{vm.activeSubscription.regular | currency:'&euro;&nbsp':2}}</small>
+    </b>
+  </div>
+  <p>
+    <small>Discount as long as your subscription runs</small>
+    <b class="pull-right">
+      <small class="discounted-price">-&nbsp;{{vm.activeSubscription.discount | currency:'&euro;&nbsp;':2}}</small>
+    </b>
+  </p>
+  <br/>
+  <p>One-off</p>
+  <p>
+    <b class="pull-right">
+      <small class="discounted-price">{{vm.activeSubscription.deviceDiscountPrice | currency:'&euro;&nbsp;':2}}</small>
+    </b>
+    <div>
+      <b>
+        <small>{{vm.product.name}}</small>
+      </b>
+
+      <div>
+        <small>original</small>
+        <small>{{vm.product.deviceOriginalPrice | currency:'&euro;&nbsp':2}}</small>
+      </div>
+    </div>
+  </p>
+</section>
+
