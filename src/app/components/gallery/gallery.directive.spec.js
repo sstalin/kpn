@@ -22,6 +22,7 @@ describe('Gallery directive', function(){
   it('should bind to controller', function(){
     expect(ctrl).toEqual(jasmine.any(Object));
     expect(ctrl.activate).toEqual(jasmine.any(Function));
+    expect(ctrl.isActive).toEqual(jasmine.any(Function));
   });
 
   it('should set hero image', function(){
